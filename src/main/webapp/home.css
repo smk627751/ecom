@@ -1,0 +1,304 @@
+@charset "UTF-8";
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: sans-serif;
+}
+body
+{
+	display:grid;
+	width: 100vw;
+	min-height: 100vh;
+	grid-template-rows: 10% 90%;
+	place-items: center;
+	row-gap: 15px;
+	overflow-x: hidden;
+}
+.header
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	background-color: #0790f2;
+	gap: 10px;
+	color: #fff;
+}
+.searchbox
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 350px;
+	height: 50px;
+}
+.searchbox input[type="text"]
+{
+	padding: 10px;
+	width: 100%;
+	font-size: 15px;
+	outline: none;
+	border-radius: 20px;
+	color: #fff;
+	border: 2px solid #fff;
+	background-color: #0790f2;
+	box-shadow: inset 0px 0px 5px 2px rgba(0,0,0,0.1);
+}
+.searchbox input[type="text"]::placeholder
+{
+	color: #fff;
+}
+.searchbox button
+{
+	position: absolute;
+	right: 10px;
+	width: 30px;
+	border: none;
+	color: #fff;
+	background-color: transparent;
+	aspect-ratio: 1/1;
+	cursor: pointer;
+}
+.title
+{
+	position: absolute;
+	left: 5%;
+	font-size: 25px;
+	font-weight: 600;
+}
+.user
+{
+	position: absolute;
+	right: 5%;
+	font-size: 12px;
+	cursor: pointer;
+}
+.options
+{
+	position: absolute;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+	color: #303030;
+	background-color: #fff;
+	width: 100%;
+	height: 150px;
+	z-index: 5;
+	border-radius: 10px;
+	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.1);
+	display: none;
+}
+.options li
+{
+	display: grid;
+	place-items: center;
+	list-style: none;
+	padding: 10px;
+	font-size: 15px;
+}
+.cart
+{
+	position: absolute;
+	right: 20%;
+	cursor: pointer;
+}
+.cart a
+{
+	color: #fff;
+}
+.catalog
+{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 100%;
+	gap: 10px;
+}
+.cartitems
+{
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+	flex-wrap: nowrap;
+}
+.card
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 250px;
+	height: 300px;
+	background-color: #efefef;
+	border-radius: 10px;
+	gap: 10px;
+	padding: 10px;
+	border: 1px solid rgba(0,0,0,0.05);
+	box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.05);
+	cursor: pointer;
+}
+.cartitem
+{
+	justify-content: space-between;
+	flex-direction: row;
+	width: 50vw;
+	height: 150px;
+}
+.cartitem img
+{
+	width: 100px;
+	aspect-ratio: 1/1;
+}
+.cartitem span
+{
+	font-size: 20px;
+}
+.details
+{
+	display: grid;
+	place-items: center;
+	grid-template-columns: 60% 10% 30%;
+	width: 80%;
+	height: 15px;
+}
+.thumbnail
+{
+	width: 100%;
+	aspect-ratio: 1/1;
+	object-fit: contain;
+	border-radius: 10px;
+	background-color: #fff;
+}
+.thumbnail:hover
+{
+	transform: scale(1.005);
+}
+a
+{
+	text-decoration: none;
+	color: #000;
+}
+.name,.price
+{
+	width: 100%;
+	height: 15px;
+	text-align: center;
+	font-size: 15px;
+}
+.price
+{
+	font-weight: 600;
+}
+.buynow
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 50vw;
+	padding: 10px;
+	transform: scale(1.25);
+}
+.buynow .thumbnail
+{
+	width: 150px;
+}
+.buynow .product
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 500px;
+	background-color: #efefef;
+	padding: 10px;
+}
+.buynow .product .details
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.buynow .form
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 500px;
+	height: 200px;
+	gap: 10px;
+	background-color: #efefef;
+}
+.buynow .form #plus,.buynow .form #minus
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 15px;
+	height: 15px;
+	padding: 15px;
+	cursor: pointer;
+	background-color: #0790f2;
+	color: #fff;
+	border: none;
+	border-radius: 50px;
+}
+.buynow .form input
+{
+	width: 80%;
+	height: 30px;
+	outline: none;
+}
+.buynow .form .quantity-box
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+}
+.buynow .form .quantity
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.buynow .form .quantity input
+{
+	width: 50px;
+	border: none;
+	background-color: transparent;
+	text-align: center;
+}
+.total
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 150px;
+	gap: 50px;
+}
+.total input
+{
+	width: 20px;
+	background-color: transparent;
+	border: none;
+}
+.buynow .form input[type="submit"]
+{
+	width: 100px;
+	height: 50px;
+	padding: 10px;
+	border: none;
+	border-radius: 50px;
+	background-color: #0790f2;
+	color: #fff;
+	cursor: pointer;
+}

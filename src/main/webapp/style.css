@@ -1,0 +1,104 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(#0790f2,#074775);
+}
+.container
+{
+    width: 350px;
+    height: 50vh;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 5px;
+    gap: 20px;
+}
+.signup
+{
+	height: 80vh;
+}
+.status
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    padding: 10px;
+    font-size: 15px;
+    color: red;
+    border-radius: 5px;
+    background-color: rgba(255, 0, 0, 0.2);
+}
+.inputfield
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.label
+{
+    position: absolute;
+    display: grid;
+    place-items: center;
+    align-items: center;
+    font-size: 14px;
+    left: 12%;
+    padding:2px;
+    padding-bottom: 0px;
+    color: #666565d5;
+    background-color: #fff;
+    transition: 0.2s;
+}
+input[type="radio"]
+{
+    width: 15px;
+    cursor: pointer;
+}
+input
+{
+    width: 80%;
+    height: 30px;
+    padding: 20px;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #cdcdcd;
+}
+input:focus
+{
+    border: 1px solid #0790f2;
+    border-radius: 5px;
+}
+input:focus ~ .label , input:valid ~ .label{
+    color: #0790f2;
+    font-size: 10px;
+    transform: translateY(-18px);
+}
+input[type="submit"]
+{
+    display: grid;
+    place-items: center;
+    color: #fff;
+    height: 50px;
+    background: #0790f2;
+    cursor: pointer;
+    border-radius: 5px;
+}
+input[type="submit"]:hover
+{
+    filter: brightness(0.9);
+}
